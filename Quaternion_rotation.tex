@@ -75,30 +75,96 @@ where;
 \end{align*}
 
 
+\subsection{Pure quaternions.}
+
+A pure quaternion -- also referred to sometimes as a purely imaginary quaternion, is one whose real or scalar component
+is equal to zero. That is, if we have;
+
+\begin{equation*}
+    Q = Q_0 + Q_1 + Q_2 + Q_3 \; \; \; \; \; \; \mid \; \; Q_0 = 0
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+then;
+
+\begin{align*}
+    Q & = 0 + Q_1 + Q_2 + Q_3  \\
+      & = \vec{Q}
+\end{align*}
+\vspace{0.0\baselineskip}
+as oppo
+
+\subsection{Unit quaternions.}
+
+A unit quaternion -- not to be confused with a quaternion unit such as \(1\), \(\quaternion{i}\), \(\quaternion{j}\), or
+\(\quaternion{k}\), is a quaternion whose length or magnitude is equal to one. For example, the following quaternions
+are all unit quaternions, because they all have a length or magnitude of one;
+
+\begin{align*}
+    Q1 & = 1  \\
+    Q2 & = 0.5 + \quaternion{i}0.5 + \quaternion{j}0.5 + \quaternion{k}0.5  \\
+    Q3 & = 0.707 + \quaternion{i}0.707  \\
+    Q4 & = \quaternion{i}0.577 + \quaternion{j}0.577 + \quaternion{k}0.577
+\end{align*}
+\vspace{0.0\baselineskip}
+
+To illustrate, first consider the quaternion \(Q2\).
+
+\begin{align*}
+    \lVert Q2 \rVert & = \sqrt{0.5^2 + 0.5^2 + 0.5^2 + 0.5^2}  \\
+                     & = \sqrt{0.25 + 0.25 + 0.25 + 0.25}  \\
+                     & = \sqrt{1}  \\
+                     & = 1
+\end{align*}
+\vspace{0.0\baselineskip}
+
+Next consider the quaternion \(Q4\).
+
+\begin{align*}
+    \lVert Q4 \rVert & = \sqrt{0.577^2 + 0.577^2 + 0.577^2}  \\
+                     & = \sqrt{0.333 + 0.333 + 0.333}  \\
+                     & = \sqrt{1}  \\
+                     & = 1
+\end{align*}
+\vspace{0.0\baselineskip}
+
+It might be worth noting - but then again it might not, that when taken altogether, all of the unit quaternions form the
+surface of a 4-dimensional hypersphere. I mention that this might not be worth noting, because the concept of a
+4-dimensional hypersphere seems almost incomprehensible to some people nd they would rather not have to think about it!
+
 
 \subsection{Quaternion units and rules.}
 
-In the three previous examples of quaternions, \(1\), \(\quaternion{i}\), \(\quaternion{j}\), and \(\quaternion{k}\) are all known as
-quaternion units, even though only \(\mathrm{i}\), \(\mathrm{j}\), and \(\mathrm{k}\) are explicitly depicted in the
-three previous definitions of \(Q\). \\
+Let's recall our three example quaternions from earlier, that is;
+
+\begin{align*}
+Q & = w   + \quaternion{i} x   + \quaternion{i} y   + \quaternion{k} z  \\
+Q & = a   + \quaternion{i} b   + \quaternion{j} c   + \quaternion{k} d  \\
+Q & = Q_0 + \quaternion{i} Q_1 + \quaternion{j} Q_2 + \quaternion{k} Q_3
+\end{align*}
+\vspace{0.0\baselineskip}
+
+In these three examples, \(1\), \(\quaternion{i}\), \(\quaternion{j}\), and \(\quaternion{k}\) are all known as
+quaternion units, even though it is only \(\quaternion{i}\), \(\quaternion{j}\), and \(\quaternion{k}\) which are
+explicitly depicted in the three previous definitions of \(Q\). \\
 
 When it comes to multiplying these units with themselves and each other, they satisfy the following rules;
 
 \begin{equation*}
-\mathrm{i}^2=\mathrm{j}^2=\mathrm{k}^2=\mathrm{ijk}=-1
+\quaternion{i}^2=\quaternion{j}^2=\quaternion{k}^2=\quaternion{ijk}=-1
 \end{equation*}
 \vspace{0.0\baselineskip}
 
 From this, the following additional multiplication rules can also be derived;
 
 \begin{equation*}
-\mathrm{ij}=\mathrm{k},\quad \mathrm{jk}=\mathrm{i},\quad \mathrm{ki}=\mathrm{j},
+\quaternion{ij}=\quaternion{k},\quad \quaternion{jk}=\quaternion{i},\quad \quaternion{ki}=\quaternion{j},
 \end{equation*}
 
 as well as;
 
 \begin{equation*}
-\mathrm{ji}=-\mathrm{k}, \quad \mathrm{kj}=-\mathrm{i},\quad \mathrm{ik}=-\mathrm{j}
+\quaternion{ji}=-\quaternion{k}, \quad \quaternion{kj}=-\quaternion{i},\quad \quaternion{ik}=-\quaternion{j}
 \end{equation*}
 
 
@@ -108,7 +174,7 @@ as well as;
 Now consider another quaternion, which we will name \(P\).
 
 \begin{equation*}
-P = P_0 + \mathrm{i}P_1 + \mathrm{j}P_2 + \mathrm{k}P_3
+P = P_0 + \quaternion{i}P_1 + \quaternion{j}P_2 + \quaternion{k}P_3
 \end{equation*}
 \vspace{0.0\baselineskip}
 
@@ -122,7 +188,7 @@ P = P_0 + \vec{P}
 We can multiply this quaternion with the earlier quaternion \(Q\) as follows;
 
 \begin{equation*}
-PQ = (P_0 + \mathrm{i}P_1 + \mathrm{j}P_2 + \mathrm{k}P_3)(Q_0 + \mathrm{i}Q_1 + \mathrm{j}Q_2 + \mathrm{k}Q_3)
+PQ = (P_0 + \quaternion{i}P_1 + \quaternion{j}P_2 + \quaternion{k}P_3)(Q_0 + \quaternion{i}Q_1 + \quaternion{j}Q_2 + \quaternion{k}Q_3)
 \end{equation*}
 \vspace{0.0\baselineskip}
 
@@ -269,10 +335,15 @@ denoted mathematically as;
 \end{equation*}
 \vspace{0.0\baselineskip}
 
-We won't discuss the cross product any further here, but we will get back to it soon. \\
+As a point of interest, note that the cross product doesn't contain any real terms. That is, it doesn't contain either
+\(P_0\) or \(Q_0\). Keep this in mind, as we will return to this fact again later. \\
 
-We have now accounted for all twelve of the terms which comprise the vector component of the final result. If we add
-together all three of the products which we just derived, we end up with following definition for our vector component.
+We won't discuss the cross product any further here, however we will return to it soon. \\
+
+\textbullet \; Bringing these three terms together. \\
+
+We have now accounted for all twelve of the terms which comprise the vector component of the final result. If we sum
+together all three of the terms which we just derived, then we end up with following definition for our vector component.
 
 \begin{equation*}
     \text{Vector component}(PQ) = P_0\vec{Q} + Q_0\vec{P} + (\vec{P}\times\vec{Q})
@@ -294,14 +365,29 @@ product.
 \newpage
 \section{Adding the scalar and vector parts together.}
 
-If we bring together our definitions for the scalar part and the vector part of the final result, then we will end up
-with the following result for our quaternion multiplication \(PQ\);
+If we bring together our definitions for the scalar part and the vector part of the final result, then we will get
+the following result for our quaternion multiplication \(PQ\);
 
 \begin{align*}
 PQ &= \text{Scalar component}(PQ) + \text{Vector component}(PQ)  \\
    &= \bigr(P_{0}Q_{0} - \vec{P} \cdot \vec{Q}\bigr) \, + \, \bigr(P_0\vec{Q} + Q_0\vec{P} + (\vec{P}\times\vec{Q})\bigr)
 \end{align*}
 
+
+\subsection{What if \(P\) and \(Q\) were pure quaternions?}
+
+If \(P\) and \(Q\) were pure quaternions, then \(P_0\) and \(Q_0\) would boths be equal to zero. In that case we would
+get;
+
+\begin{align*}
+PQ & = \bigl(P_{0}Q_{0} - \vec{P} \cdot \vec{Q}\bigr) \, + \, \bigr(P_0\vec{Q} + Q_0\vec{P} + (\vec{P}\times\vec{Q})\bigr)  \\
+   & = \bigl((0 \times 0) - \vec{P} \cdot \vec{Q}\bigr) \, + \, \bigr((0 \times \vec{Q}) + (0 \times \vec{P}) + (\vec{P} \times \vec{Q})\bigr)  \\
+   & = \bigl(0 - \vec{P} \cdot \vec{Q}\bigr) \, + \, \bigr(0 + 0 + (\vec{P}\times\vec{Q})\bigr)  \\
+   & = -(\vec{P} \cdot \vec{Q}) \, + \, (\vec{P} \times \vec{Q})
+\end{align*}
+
+Notice that three of the terms have disappeared and we are now left with jsut two terms -- the dot product between \(P\)
+and \(Q\), and the cross product between \(P\) and \(Q\).
 
 \newpage
 \section{The cross product : \((\vec{P}\times\vec{Q})\)}
@@ -353,6 +439,28 @@ Which then simplifies one step further to become;
 \begin{equation*}
     \det{(A)} = \quaternion{i}(P_2Q_3 - P_3Q_2) + \quaternion{j}(P_3Q_1 - P_1Q_3) + \quaternion{k}(P_1Q_2 - P_2Q_1)
 \end{equation*}
+
+
+\subsection{A very brief history of how the cross product came about.}
+
+If you have ever studied the cross product before and wondered why it is defined in the manner in which it is -- this is
+it. That is, it came about in large part thanks to William Rowan Hamilton and his development of quaternions and
+quaternion multiplication along with the rules governing it, in the 1840s. We use the expression
+``in large part'', because it is widely believed that Hamilton never actually used the term ``cross product'' for that
+part of the result which we looked at earlier. Instead, it is reported that he just considered the result of a
+quaternion multiplication to be composed of a scalar part and a vector part. Later in the 1800s, Oliver Heaviside and
+Josiah Willard Gibbs built on Hamilton's work with quaternions to formalise the mathematical concept of vector. It is
+from their work, that the idea of the cross product came about and was subsequently named as such. \\
+
+However, other figures were also involved in work which was relevant to the development of the cross product. In the
+1770s, Joseph Louis Lagrange developed formulas which are algebraically equivalent to the cross product. Around the same
+time that Hamilton developed the quaternion, Hermann Grassmann also undertook work which helped contribute to the
+cross product as we know it today.
+
+
+\subsection{What does the cross product actually mean?}
+
+We have talked somewhat at length about the cross
 
 
 \subsection*{3. Identify the dot and cross products}
