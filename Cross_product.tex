@@ -1,0 +1,90 @@
+\chapter{The cross product : \((\vec{P}\times\vec{Q})\)}
+
+Earlier, we stated that the cross product components of \(\vec{P}\times\vec{Q}\) can be calculated by evaluating the
+determinant of the following matrix, which we will arbitrarily call \(A\) here.
+
+\begin{equation*}
+    A = \begin{vmatrix}
+        \qi & \qj & \quaternion{k}  \\
+        P_1      & P_2      & P_3       \\
+        Q_1      & Q_2      & Q_3
+        \end{vmatrix}
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+Calculating the determinant of this matrix proceeds as follows;
+
+\begin{equation*}
+    \det{(A)} = \qi
+    \begin{vmatrix}
+        P_2        & P_3  \\
+        Q_2        & Q_3
+    \end{vmatrix}
+    -
+    \qj
+    \begin{vmatrix}
+        P_1        & P_3  \\
+        Q_1        & Q_3
+    \end{vmatrix}
+    +
+    \quaternion{k}
+    \begin{vmatrix}
+        P_1        & P_2  \\
+        Q_1        & Q_2
+    \end{vmatrix}
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+Expanding this out gives the following;
+
+\begin{equation*}
+    \det{(A)} = \qi (P_2Q_3 - P_3Q_2) - \qj (P_1Q_3 - P_3Q_1) + \quaternion{k}(P_1Q_2 - P_2Q_1)
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+Which then simplifies one step further to become;
+
+\begin{equation*}
+    \det{(A)} = \qi (P_2Q_3 - P_3Q_2) + \qj (P_3Q_1 - P_1Q_3) + \quaternion{k}(P_1Q_2 - P_2Q_1)
+\end{equation*}
+
+
+\section{A very brief history of how the cross product came about.}
+
+If you have ever studied the cross product before and wondered why it is defined in the manner in which it is -- this is
+it. That is, it came about in large part thanks to William Rowan Hamilton and his development of quaternions and
+quaternion multiplication along with the rules governing it, in the 1840s. We use the expression
+``in large part'', because it is widely believed that Hamilton never actually used the term ``cross product'' for that
+part of the result which we looked at earlier. Instead, it is reported that he just considered the result of a
+quaternion multiplication to be composed of a scalar part and a vector part. Later in the 1800s, Oliver Heaviside and
+Josiah Willard Gibbs built on Hamilton's work with quaternions to formalise the mathematical concept of vector. It is
+from their work, that the idea of the cross product came about and was subsequently named as such. \\
+
+However, other figures were also involved in work which was relevant to the development of the cross product. In the
+1770s, Joseph Louis Lagrange developed formulas which are algebraically equivalent to the cross product. Around the same
+time that Hamilton developed the quaternion, Hermann Grassmann also undertook work which helped contribute to the
+cross product as we know it today.
+
+
+\section{What does the cross product actually mean?}
+
+So far in this article, we have talked somewhat at length about the cross product. But what does the cross product
+actually mean? To try and help explain what it means, we will consider two different scenarios. The first scenario
+involves the multiplication of two separate vectors, while the second scenario involves the multiplication of two
+separate quaternions.  \\
+
+\textbullet \; Multiplying two vectors together.  \\
+
+If we calculate the cross product between the two 3-dimensional vectors \(\vec{A}\) and \(\vec{B}\), then the result
+will be a third vector which points in a direction that is perpendicular to both \(\vec{A}\) and \(\vec{B}\).  The
+magnitude of the resulting vector is given by the following equation\\
+
+\begin{equation}
+    |A||B|\sin(\theta)
+\end{equation}
+
+\textbullet \; Multiplying two quaternions together.  \\
+
+But what if we multiply two quaternions together, say \(P\) and \(Q\)? In this case, the cross product component of the
+result, represents that component of the result which is projected onto the 3-dimensional imaginary subspace of the
+4-dimensional quaternion space \(\mathbb{H}\).

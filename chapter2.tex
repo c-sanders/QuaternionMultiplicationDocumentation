@@ -1,0 +1,142 @@
+\chapter{Quaternions.}
+
+\section{What are they exactly?}
+
+Quaternions are closely related to complex numbers. However, whereas complex numbers are comprised of one real component and one
+imaginary component, quaternions are comprised of one real component and three imaginary components, for a total of four
+components altogether. \\
+
+Quaternions can be thought of as extending the complex number system from two dimensions into four dimensions. Whereas
+complex numbers reside in the 2-dimensional space which is denoted as \(\mathbb{C}\) (which stands for ``complex''),
+quaternions reside in a 4-dimensional number space which is denoted as \(\mathbb{H}\) (which stands for ``Hamilton''). \\
+
+Since quaternions are comprised of multiple imaginary components, they are categorised as belonging to a class of
+numbers known as ``hypercomplex numbers''. Furthermore, since they are comprised of four components in total, this helps
+to explain why they are called ``quaternions''; as ``quat'' means of or relating to four parts. \(\mathbb{C}\)
+
+A quaternion is often denoted using a form which is similar to the following;
+
+\begin{align*}
+Q & = w   + \qi x   + \qi y   + \quaternion{k} z  \\
+Q & = a   + \qi b   + \qj c   + \quaternion{k} d  \\
+Q & = Q_0 + \qi Q_1 + \qj Q_2 + \quaternion{k} Q_3
+\end{align*}
+\vspace{0.0\baselineskip}
+
+The first component, or the real component of the quaternion, i.e. \(w\), \(a\), or \(Q_0\) in the previous examples,
+is often referred to as the scalar part of the quaternion, while the remaining three components are collectively
+referred to as the vector part of the quaternion.
+
+\begin{equation*}
+Q = \underbrace{w}_{\text{scalar}} + \underbrace{\qi x + \qj y + \quaternion{k}z}_{\text{vector}}
+\end{equation*}
+
+If we were to denote the vector component of the quaternion \(Q\) as \(\vec{Q}\), then we could rewrite the three example
+quaternions from above as follows;
+
+\begin{align*}
+    Q & = w + \vec{Q}  \\
+    Q & = a + \vec{Q}  \\
+    Q & = Q_0 + \vec{Q}
+\end{align*}
+\vspace{0.0\baselineskip}
+
+where;
+
+\begin{align*}
+    \vec{Q} &= (\qi x, \qj y, \quaternion{k}z) \; \text{or}  \\
+            &= (\qi b, \qj c, \quaternion{k}d) \; \text{or}  \\
+            &= (\qi Q_{1}, \qj Q_{2}, \quaternion{k}Q_{3})
+\end{align*}
+
+
+\subsection{Quaternion basis units and the rules governing their multiplication.}
+
+Let's recall our three example quaternions from earlier, that is;
+
+\begin{align*}
+Q & = w   + \qi x   + \qi y   + \quaternion{k} z  \\
+Q & = a   + \qi b   + \qj c   + \quaternion{k} d  \\
+Q & = Q_0 + \qi Q_1 + \qj Q_2 + \quaternion{k} Q_3
+\end{align*}
+\vspace{0.0\baselineskip}
+
+In these three examples, \(1\), \(\qi\), \(\qj\), and \(\quaternion{k}\) are all known as the quaternion basis units,
+even though only \(\qi\), \(\qj\), and \(\quaternion{k}\) are explicitly depicted in the three definitions of \(Q\). \\
+
+When it comes to multiplying these units with themselves and each other, they satisfy the following rules;
+
+\begin{equation*}
+\qi^2=\qj^2=\quaternion{k}^2=\quaternion{ijk}=-1
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+From this, the following additional multiplication rules can also be derived;
+
+\begin{equation*}
+\quaternion{ij}=\quaternion{k},\quad \quaternion{jk}=\qi,\quad \quaternion{ki}=\qj,
+\end{equation*}
+
+as well as;
+
+\begin{equation*}
+\quaternion{ji}=-\quaternion{k}, \quad \quaternion{kj}=-\qi,\quad \quaternion{ik}=-\qj
+\end{equation*}
+
+
+\subsection{Pure quaternions.}
+
+A pure quaternion -- sometimes also referred to as a pure imaginary quaternion or a vector quaternion, is a quaternion
+whose real or scalar component is equal to zero. That is, if we have;
+
+\begin{equation*}
+    Q = Q_0 + Q_1 + Q_2 + Q_3 \; \; \; \; \; \; \mid \; \; Q_0 = 0
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+then;
+
+\begin{align*}
+    Q & = 0 + Q_1 + Q_2 + Q_3  \\
+      & = \vec{Q}
+\end{align*}
+\vspace{0.0\baselineskip}
+
+
+\subsection{Unit quaternions.}
+
+A unit quaternion -- not to be confused with a quaternion unit such as \(1\), \(\qi\), \(\qj\), or \(\qk\), is a
+quaternion whose length or magnitude is equal to one. For example, the following quaternions are all unit quaternions,
+because they all have a length or magnitude of one;
+
+\begin{align*}
+    Q1 & = 1  \\
+    Q2 & = 0.5 + \qi 0.5 + \qj 0.5 + \quaternion{k}0.5  \\
+    Q3 & = 0.707 + \qi 0.707  \\
+    Q4 & = \qi 0.577 + \qj 0.577 + \quaternion{k}0.577
+\end{align*}
+\vspace{0.0\baselineskip}
+
+To illustrate, first consider the quaternion \(Q2\).
+
+\begin{align*}
+    \lVert Q2 \rVert & = \sqrt{0.5^2 + 0.5^2 + 0.5^2 + 0.5^2}  \\
+                     & = \sqrt{0.25 + 0.25 + 0.25 + 0.25}  \\
+                     & = \sqrt{1}  \\
+                     & = 1
+\end{align*}
+\vspace{0.0\baselineskip}
+
+Next consider the quaternion \(Q4\).
+
+\begin{align*}
+    \lVert Q4 \rVert & = \sqrt{0.577^2 + 0.577^2 + 0.577^2}  \\
+                     & = \sqrt{0.333 + 0.333 + 0.333}  \\
+                     & = \sqrt{1}  \\
+                     & = 1
+\end{align*}
+\vspace{0.0\baselineskip}
+
+It might be worth noting - but then again it might not, that when taken altogether, all of the unit quaternions form the
+surface of a 4-dimensional hypersphere. I mention that this might not be worth noting, because the concept of a
+4-dimensional hypersphere seems almost incomprehensible to some people nd they would rather not have to think about it!

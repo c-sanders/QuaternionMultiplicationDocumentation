@@ -1,0 +1,57 @@
+\chapter{Multiplying two quaternions together.}
+
+Now consider another quaternion, which we will name \(P\).
+
+\begin{equation*}
+P = P_0 + \qi P_1 + \qj P_2 + \quaternion{k}P_3
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+Just like we did for quaternion \(Q\), we can also define this quaternion in terms of its scalar and vector components;
+
+\begin{equation*}
+P = P_0 + \vec{P}
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+We can multiply this quaternion with the earlier quaternion \(Q\) as follows;
+
+\begin{equation*}
+PQ = (P_0 + \qi P_1 + \qj P_2 + \quaternion{k}P_3)(Q_0 + \qi Q_1 + \qj Q_2 + \quaternion{k}Q_3)
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+Expanding this out gives the following;
+
+\begin{align*}
+PQ = {}& \;   P_0(Q_0 + iQ_1 + jQ_2 + kQ_3) \; + \\
+       &     \qi P_1(Q_0 + \qi Q_1 + \qj Q_2 + \quaternion{k}Q_3) \; + \\
+       &     \qj P_2(Q_0 + \qi Q_1 + \qj Q_2 + \quaternion{k}Q_3) \; + \\
+       & \!  \quaternion{k}P_3(Q_0 + \qi Q_1 + \qj Q_2 + \quaternion{k}Q_3)
+\end{align*}
+
+Expanding even further gives;
+
+\begin{align*}
+PQ = {}& \;                P_0Q_0      + \;\, \qi P_0Q_1 \,  + \qj P_0Q_2 +   \quaternion{k}P_0Q_3 \;  + \\
+       &     \qi P_1Q_0      + \,   \qi^2P_1Q_1   + \quaternion{ij}P_1Q_2 +  \quaternion{ik}P_1Q_3 \; + \\
+       &     \qj P_2Q_0 \,\! + \,\! \quaternion{ji}P_2Q_1 \, + \qj^2P_2Q_2 + \quaternion{jk}P_2Q_3 \; + \\
+       & \!  \quaternion{k}P_3Q_0      +      \quaternion{ki}P_3Q_1    + \quaternion{kj}P_3Q_2 +  \quaternion{k}^2P_3Q_3
+\end{align*}
+
+Applying the multiplication rules;
+
+\begin{align*}
+PQ = {}& \;                P_0Q_0 + \qi P_0Q_1 + \qj P_0Q_2 + \quaternion{k}P_0Q_3 \; + \\
+       &     \qi P_1Q_0 - P_1Q_1               + \quaternion{k}P_1Q_2 - \qj P_1Q_3 \; + \\
+       & \!  \qj P_2Q_0 - \quaternion{k}P_2Q_1 - P_2Q_2               + \qi P_2Q_3 \; + \\
+       & \!  \quaternion{k}P_3Q_0 + \qj P_3Q_1 - \qi P_3Q_2 - P_3Q_3
+\end{align*}
+
+Collecting the scalar, \(i\), \(j\), and \(k\) terms gives
+\begin{align*}
+PQ = {} &          (P_0Q_0 - P_1Q_1 - P_2Q_2 - P_3Q_3) + \\
+        & \qi (P_0Q_1 + P_1Q_0 + P_2Q_3 - P_3Q_2) + \\
+        & \qj (P_0Q_2 - P_1Q_3 + P_2Q_0 + P_3Q_1) + \\
+        & \quaternion{k} (P_0Q_3 + P_1Q_2 - P_2Q_1 + P_3Q_0)
+\end{align*}

@@ -1,0 +1,70 @@
+\chapter{Identify the dot and cross products}
+
+The ordinary three-dimensional dot product is
+\[
+\mathbf P\cdot\mathbf Q
+=P_1Q_1+P_2Q_2+P_3Q_3.
+\]
+
+Therefore,
+\[
+\operatorname{Sc}(PQ)
+=P_0Q_0-\mathbf P\cdot\mathbf Q.
+\]
+
+The ordinary three-dimensional cross product is
+\[
+\mathbf P\times\mathbf Q
+=
+\begin{pmatrix}
+P_2Q_3-P_3Q_2\\
+P_3Q_1-P_1Q_3\\
+P_1Q_2-P_2Q_1
+\end{pmatrix}.
+\]
+
+The vector part can consequently be written as
+\[
+\operatorname{Vec}(PQ)
+=P_0\mathbf Q+Q_0\mathbf P+\mathbf P\times\mathbf Q.
+\]
+
+Thus the complete quaternion product is
+\[
+\boxed{
+PQ=
+\left(P_0Q_0-\mathbf P\cdot\mathbf Q\right)
++
+\left(P_0\mathbf Q+Q_0\mathbf P+\mathbf P\times\mathbf Q\right)
+}.
+\]
+
+Here the first parentheses contain the scalar part, and the second parentheses contain the vector part.
+
+\section*{4. Why the cross product appears}
+
+For example, the terms contributing to the \(i\)-component include
+\[
+(jP_2)(kQ_3)=iP_2Q_3,
+\]
+whereas
+\[
+(kP_3)(jQ_2)=-iP_3Q_2.
+\]
+
+Together they give
+\[
+i(P_2Q_3-P_3Q_2),
+\]
+which is the \(i\)-component of
+\(\mathbf P\times\mathbf Q\).
+
+The \(j\)- and \(k\)-components arise in the same way:
+\[
+j(P_3Q_1-P_1Q_3),
+\]
+\[
+k(P_1Q_2-P_2Q_1).
+\]
+
+The cross product therefore emerges from the antisymmetric part of quaternion multiplication.
