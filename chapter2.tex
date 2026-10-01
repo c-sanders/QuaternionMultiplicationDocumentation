@@ -1,6 +1,6 @@
 \chapter{Quaternions.}
 
-\section{What are they exactly?}
+\section{What are quaternions exactly?}
 
 Quaternions are closely related to complex numbers. However, whereas complex numbers are comprised of one real component and one
 imaginary component, quaternions are comprised of one real component and three imaginary components, for a total of four
@@ -50,7 +50,53 @@ where;
 \end{align*}
 
 
-\subsection{Quaternion basis units and the rules governing their multiplication.}
+\section{Quaternions are not complex vectors.}
+
+Consider the following 3-dimensional vector;
+
+\begin{equation*}
+\vec{V} = (\sqrt{x}, \sqrt{y}, \sqrt{z}) \;\;\;\;\;\; | \;\; x=y=z=-1
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+For the values of \(x\), \(y\), and \(z\) shown above, this vector would evaluate to the following;
+
+\begin{align*}
+\vec{V} & = (\sqrt{-1}, \sqrt{-1}, \sqrt{-1})  \\
+        & = (\qi, \qi, \qi)
+\end{align*}
+\vspace{0.0\baselineskip}
+
+The resulting value of the vector \(\vec{V}\), is not the same thing as a quaternion whose scalar component is equal to
+0. That is, it is not the same thing as -- or is not equal to, the following quaternion;
+
+\begin{align*}
+    Q & = 0 + \qi + \qj + \qk  \\
+      &= (\qi, \qj, \qk)
+\end{align*}
+\vspace{0.0\baselineskip}
+
+For the vector \(\vec{V}\) from above, the result of;
+
+\begin{equation*}
+    \sqrt{y} \;\;\;\;\;\; | \;\; y=-1
+\end{equation*}
+
+is not denoted by \(\qj\), and similarly the result of;
+
+\begin{equation*}
+    \sqrt{z} \;\;\;\;\;\; | \;\; z=-1
+\end{equation*}
+
+is not denoted by \(\qk\).  \\
+
+The vector \(\vec{V}\) would reside in the complex space \(\mathbb{C}^3\), whereas the pure quaternion would
+reside in the space \(\mathbb{H}\). Furthermore, all of the components of \(\vec{V}\) will commute with all of the other
+components of \(\vec{V}\). However -- and as we will see in a moment, this is not the case for a quaternion such as
+\(Q\).
+
+
+\section{Quaternion basis units and the rules governing their multiplication.}
 
 Let's recall our three example quaternions from earlier, that is;
 
@@ -84,7 +130,7 @@ as well as;
 \end{equation*}
 
 
-\subsection{Pure quaternions.}
+\section{Pure quaternions.}
 
 A pure quaternion -- sometimes also referred to as a pure imaginary quaternion or a vector quaternion, is a quaternion
 whose real or scalar component is equal to zero. That is, if we have;
@@ -103,7 +149,7 @@ then;
 \vspace{0.0\baselineskip}
 
 
-\subsection{Unit quaternions.}
+\section{Unit quaternions.}
 
 A unit quaternion -- not to be confused with a quaternion unit such as \(1\), \(\qi\), \(\qj\), or \(\qk\), is a
 quaternion whose length or magnitude is equal to one. For example, the following quaternions are all unit quaternions,
