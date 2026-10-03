@@ -1,1 +1,32 @@
-\chapter{The dot product : \(\vec{P} \cdot \vec{Q}\)}
+\chapter{The dot product : \(\vec{A} \cdot \vec{B}\)}
+
+
+\section{What does the dot product actully mean?}
+
+The dot product operates on two arguments and produces a scalar value as a result. Conceptually, the dot product
+measures how much its two arguments point in the same direction. Put another way, the dot product can be thought of as
+measuring how much of one of these arguments would be ``projected'' onto the other. The dot product effectively asks,
+``how much do the two arguments agree in direction'', or put another way, ``how much do they align''? \\
+
+To help try and illustrate what this means, consider the scenario where we have two arguments. Let us call these two
+arguments \(\vec{A}\) and \(\vec{B}\). Furthermore, let us split the argument \(\vec{B}\) into two components relative
+to the argument \(\vec{A}\), and let us do it in such a way that one of these components is parallel to argument
+\(\vec{A}\), while the other component is perpendicular to argument \(\vec{A}\). In this case, we can define the
+parallel component as follows;
+
+\begin{equation*}
+    |B|\cos{(\theta)}
+\end{equation*}
+\vspace{0.0\baselineskip}
+
+This parallel component is a measure of how much of argument \(\vec{B}\) points in the direction of argument \(\vec{A}\).
+Alternatively, we can say that it is a measure of how much of argument \(\vec{B}\) is projected onto argument
+\(\vec{A}\). If we multiply this parallel component by \(||\vec{A}||\), i.e. the magnitude or length of the argument
+\(\vec{A}\), then we get the dot product between \(\vec{A}\) and \(\vec{B}\). \\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/dot_product_projection.png}
+    \caption{Graphical illustration of the parallel component of \(\vec{B}\).}
+    \label{fig:cross_product}
+\end{figure}

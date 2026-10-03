@@ -40,23 +40,26 @@ Expanding this out gives the following;
 \begin{equation*}
     \det{(A)} = \qi (P_2Q_3 - P_3Q_2) - \qj (P_1Q_3 - P_3Q_1) + \quaternion{k}(P_1Q_2 - P_2Q_1)
 \end{equation*}
-\vspace{0.0\baselineskip}
+% \vspace{0.0\baselineskip}
 
-Which then simplifies one step further to become;
-
-\begin{equation*}
-    \det{(A)} = \qi (P_2Q_3 - P_3Q_2) + \qj (P_3Q_1 - P_1Q_3) + \quaternion{k}(P_1Q_2 - P_2Q_1)
-\end{equation*}
+% Which can then be optionally simplified one step further to become;
+%
+% \begin{equation*}
+%     \det{(A)} = \qi (P_2Q_3 - P_3Q_2) + \qj (P_3Q_1 - P_1Q_3) + \quaternion{k}(P_1Q_2 - P_2Q_1)
+% \end{equation*}
 
 
 \section{A very brief history of how the cross product came about.}
 
-If you have ever studied the cross product before and wondered why it is defined in the manner in which it is -- this is
-it. That is, it came about in large part thanks to William Rowan Hamilton and his development of quaternions and
-quaternion multiplication along with the rules governing it, in the 1840s. We use the expression
+If you have ever studied the cross product before and have wondered why it is defined in the manner in which it is, then
+hopefully the derivation from earlier of the multiplicative product between two quaternions, should help to explain it.
+That is, the cross product comes about as part of the overall solution to multiplying two quaternions together. \\
+
+This work came about in the 1840s, thanks in large part to William Rowan Hamilton and his development of quaternions and
+quaternion multiplication along with the rules governing it. We use the expression
 ``in large part'', because it is widely believed that Hamilton never actually used the term ``cross product'' for that
-part of the result which we looked at earlier. Instead, it is reported that he just considered the result of a
-quaternion multiplication to be composed of a scalar part and a vector part. Later in the 1800s, Oliver Heaviside and
+particular part of the quaternion multiplicative product which now bears that name. Instead, it is reported that he just
+considered the result of a quaternion multiplication to be composed of a scalar part and a vector part. Later in the 1800s, Oliver Heaviside and
 Josiah Willard Gibbs built on Hamilton's work with quaternions to formalise the mathematical concept of vector. It is
 from their work, that the idea of the cross product came about and was subsequently named as such. \\
 
@@ -75,16 +78,26 @@ separate quaternions.  \\
 
 \textbullet \; Multiplying two vectors together.  \\
 
-If we calculate the cross product between the two 3-dimensional vectors \(\vec{A}\) and \(\vec{B}\), then the result
+If we calculate the cross product between two 3-dimensional vectors -- say \(\vec{A}\) and \(\vec{B}\), then the result
 will be a third vector which points in a direction that is perpendicular to both \(\vec{A}\) and \(\vec{B}\).  The
-magnitude of the resulting vector is given by the following equation\\
+magnitude of the resulting vector is given by the following equation;
 
 \begin{equation}
-    |A||B|\sin(\theta)
+    |\vec{A} \times \vec{B}| = |\vec{A}||\vec{B}|\sin(\theta)\hat{n}
 \end{equation}
+\vspace{0.0\baselineskip}
 
-\textbullet \; Multiplying two quaternions together.  \\
+where \(\theta\) is the angle between \(\vec{A}\) and \(\vec{B}\) and \(\hat{n}\) is a unit vector which points in the direction of
+the third vector that is perpendicular to both \(\vec{A}\) and \(\vec{B}\). \\
 
-But what if we multiply two quaternions together, say \(P\) and \(Q\)? In this case, the cross product component of the
-result, represents that component of the result which is projected onto the 3-dimensional imaginary subspace of the
+The direction of the resulting third vector can be found using the right-hand grip rule. That is, point the fingers of
+your right hand in the direction of vector \(A\), then curl them towards vector \(B\). Your thumb will then point in the
+direction of the third vector. Together, \(A\) and \(B\) will form a parallelogram and the magnitude of the cross
+product between them, tells us the area of this parallelogram. \\
+
+\textbullet \; Multiplying two quaternions together. \\
+
+But what if we multiply two quaternions together, rather than two 3-dimensional vectors? Let's say we want to multiply
+together, our two quaternions \(P\) and \(Q\) from earlier. In this case, the cross product component of the result,
+represents that component of the result, which is projected onto the 3-dimensional imaginary subspace of the
 4-dimensional quaternion space \(\mathbb{H}\).

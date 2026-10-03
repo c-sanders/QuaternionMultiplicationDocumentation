@@ -3,8 +3,8 @@
 Before we proceed any further, let us first rewrite the final result from the previous section. However this time, as
 part of the process of rewriting the final result, let us also highlight those terms which have certain particular
 features in common with other terms. As you may have already noticed from the final result in the previous section --
-or should hopefully notice in a moment, some of the terms share features with multiple other terms, while others share
-features with only one other term.\\
+or should hopefully notice in a moment, some of the terms share features with multiple other terms, while yet other
+terms share features with only one other term.\\
 
 Rewriting and highlighting the final result yields the following;
 
@@ -18,9 +18,10 @@ Note that the final result is composed of sixteen different terms and that;
           \(\qj\), or
           \(\quaternion{k}\).
 \end{itemize}
+\vspace{0\baselineskip}
 
-The four terms which make use of the quaternion unit \(1\) are highlighted in yellow and when taken together, they act
-as a scalar component within the final result.\\
+The four terms which make use of only the quaternion unit \(1\) are highlighted in yellow. When taken together, these
+four terms act as a scalar component within the final result.\\
 
 The other twelve terms which make up the final result are surrounded by a thin dashed red line, and when taken together,
 they act as a vector component within the final result.
@@ -156,7 +157,7 @@ PQ & = \bigl(P_{0}Q_{0} - \vec{P} \cdot \vec{Q}\bigr) \, + \, \bigr(P_0\vec{Q} +
 Notice that three of the terms have disappeared and we are now left with just two terms -- the negative of the dot
 product between \(P\) and \(Q\), and the cross product between \(P\) and \(Q\).  \\
 
-Let's perform an example multiplication between two pure quaternions, \(\vec{P}\) and \(\vec{Q}\), to see how it's done.
+Let us perform an example multiplication between two pure quaternions, \(\vec{P}\) and \(\vec{Q}\), to see how it's done.
 First, let us define \(\vec{P}\) and \(\vec{Q}\) as follows;
 
 \begin{align*}
@@ -167,11 +168,11 @@ First, let us define \(\vec{P}\) and \(\vec{Q}\) as follows;
 % i(P2 Q3 − P3 Q2 ) + j(P3 Q1 − P1 Q3 ) + k(P1 Q2 − P2 Q1 )
 
 \begin{align*}
-    P \times Q = &-\bigl((1 \times 4) + (2 \times 5) + (3 \times 6)\bigr) + \\
-                 & \; \qi \bigl((2 \times 6) - (3 \times 5)\bigr) +
-                   \qj \bigl((3 \times 4) - (1 \times 6)\bigr) +
-                   \qk \bigl((1 \times 5) - (2 \times 4)\bigr)  \\
-               = & -\bigl(4 + 10 + 18\bigr) +
+    PQ = & - \; \bigl((1 \times 4) + (2 \times 5) + (3 \times 6)\bigr) \\
+         & + \qi \bigl((2 \times 6) - (3 \times 5)\bigr) \\
+         & + \qj \bigl((3 \times 4) - (1 \times 6)\bigr) \\
+         & + \qk \bigl((1 \times 5) - (2 \times 4)\bigr)  \\
+    = & -\bigl(4 + 10 + 18\bigr) +
                    \qi \bigl(12 - 15\bigr) +
                    \qj \bigl(12 - 6\bigr) +
                    \qk \bigl(5  - 8\bigr)  \\
