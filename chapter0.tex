@@ -51,10 +51,11 @@ Using mathematical set-builder notation, we can define \(\mathbb{R}^2\) as follo
 \end{equation*}
 \vspace{0\baselineskip}
 
-The trouble with \(\mathbb{R}^2\), is that it doesn't really do much other than define a set of pairs of values, all of
-which are of the form \((x,y)\). For example, it doesn't define any operations which allow us to operate on any of the
-values within the set that it defines. What if we wanted to access one its values or add two of its values together.
-How would we do this? This is where structures come in.
+The trouble with \(\mathbb{R}^2\), is that it doesn't really do much other than define a set of values -- which in this
+case happen to be pairs of the form \((x,y)\). But what do we mean by this exactly? As an example, \(\mathbb{R}^2\)
+doesn't define any operations which allow us to operate on any of the values within the set that it defines. What if we
+wanted to access one of its values or add two of its values together? How would we do this? This is where structures
+come in.
 
 
 \section{Structures.}
@@ -63,11 +64,32 @@ In contemporary mathematics, a structure -- or more precisely an algebraic struc
 defined as;
 
 \begin{framed}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
 \begin{quote}
     a set together with a collection of operations -- and sometimes relations or distinguished constants, that satisfy a
     list of axioms.
 \end{quote}
-    \end{framed}
+\end{framed}
+
+So the set effectively specifies the range of data points which the operations can operate on. \\
+
+But what about this mention of axioms? An example of an applicable axiom, is that all operations should or should not
+commute, i.e. be commutative, for a particular type of number. For real numbers, multiplication operations should be
+commutative, while for quaternions they should be non-commutative. That is, if something is considered non-commutative,
+then;
+
+\begin{equation*}
+    a \times b \neq b \times a
+\end{equation*}
+\vspace{0\baselineskip}
+
+Another example of an applicable axiom, is that all operations associate, i.e. be associative, for a particular type of
+number. For real numbers, multiplication operations should be associative, while for octonions are not. If something is considered non-associative, then;
+
+\begin{equation*}
+    a(b \times c) \neq (a \times b)c
+\end{equation*}
 
 
 \section{Fields.}

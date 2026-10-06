@@ -50,7 +50,9 @@ where;
 \end{align*}
 
 
-\section{Quaternions are not complex vectors.}
+\section{Quaternions are not -- repeat not, complex vectors!}
+
+\textbullet \; Complex vectors. \\
 
 Consider the following 3-dimensional vector;
 
@@ -63,12 +65,14 @@ For the values of \(x\), \(y\), and \(z\) shown above, this vector would evaluat
 
 \begin{align*}
 \vec{V} & = (\sqrt{-1}, \sqrt{-1}, \sqrt{-1})  \\
-        & = (\qi, \qi, \qi)
+        & = (i, i, i)  \\
+        & = i \bm{\hat{\mathrm{i}}} + i \bm{\hat{\mathrm{j}}} + i \bm{\hat{\mathrm{k}}}
 \end{align*}
 \vspace{0.0\baselineskip}
 
-The resulting value of the vector \(\vec{V}\), is not the same thing as a quaternion whose scalar component is equal to
-0. That is, it is not the same thing as -- or is not equal to, the following quaternion;
+The resulting value of the vector \(\vec{V}\), is what's known as a complex vector. It is not the same thing as a
+quaternion whose scalar component is equal to 0. That is, it is not the same thing as -- or is not equal to, the
+following quaternion;
 
 \begin{align*}
     Q & = 0 + \qi + \qj + \qk  \\
@@ -83,14 +87,25 @@ For the vector \(\vec{V}\) from above, the result of;
 \end{equation*}
 \vspace{0.0\baselineskip}
 
-is denoted by \(\qi\) and not \(\qj\), and similarly the result of;
+is denoted by \(i\) and not \(j\), and similarly the result of;
 
 \begin{equation*}
     \sqrt{z} \;\;\;\;\;\; | \;\; z=-1
 \end{equation*}
 \vspace{0.0\baselineskip}
 
-is denoted by \(\qi\) and not \(\qk\).  \\
+is denoted by \(i\) and not \(k\).  \\
+
+Consider a normal 3 element vector, say something like \(2 \bm{\hat{\mathrm{i}}} + 3 \bm{\hat{\mathrm{j}}} +
+8 \bm{\hat{\mathrm{k}}}\). If we wanted to plot it, we would need a co-ordinate system/space which is comprised of
+three real valued axes that are all orthogonal to each other. \\
+
+Now consider another 3 element vector, which this time has the value \(2 \bm{\hat{\mathrm{i}}} + (3 + i2) \bm{\hat{\mathrm{j}}} +
+8 \bm{\hat{\mathrm{k}}}\). Notice that the \(\bm{\hat{\mathrm{j}}}\) component of this vector is complex. Therefore, if
+we wanted to plot it, we would need a co-ordinate system/space which is comprised of four axes. We would still need
+the three real valued axes that we required for our previous vector, however this time we would also need a single
+imaginary axis as well. This single imaginary axis would be associated with the real axis for the \(\bm{\hat{\mathrm{j}}}\)
+component -- it is not its own independent entity. \\
 
 In addition to these two differences between \(\vec{V}\) and \(Q\), there are also a number of other differences between
 them as well. For example, the vector \(\vec{V}\) resides in the complex space \(\mathbb{C}^3\), whereas the pure
